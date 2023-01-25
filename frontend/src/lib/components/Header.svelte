@@ -4,15 +4,15 @@
   import github from "$lib/images/github.svg";
 </script>
 
-<header>
-  <div class="corner">
+<header class="flex justify-between">
+  <div class="w-10 h-10">
     <a href="https://kit.svelte.dev">
       <img src={logo} alt="SvelteKit" />
     </a>
   </div>
 
-  <nav>
-    <svg viewBox="0 0 2 3" aria-hidden="true">
+  <nav class="flex justify-center">
+    <svg class="w-2 h-3 block" viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
     </svg>
     <ul>
@@ -51,12 +51,12 @@
         <a href="/settings" data-sveltekit-preload-data>Settings</a>
       </li>
     </ul>
-    <svg viewBox="0 0 2 3" aria-hidden="true">
+    <svg class="w-2 h-3 block" viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
     </svg>
   </nav>
 
-  <div class="corner">
+  <div class="w-10 h-10">
     <a href="https://github.com/sveltejs/kit">
       <img src={github} alt="GitHub" />
     </a>
@@ -64,7 +64,8 @@
 </header>
 
 <style>
-  header {
+  /*  
+header {
     display: flex;
     justify-content: space-between;
   }
@@ -151,4 +152,5 @@
   a:hover {
     color: var(--color-theme-1);
   }
+  */
 </style>

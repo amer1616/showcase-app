@@ -4,7 +4,7 @@ import { env } from "$env/dynamic/private";
 // import.meta.env.DEV;
 
 export const load = async () => {
-  console.log("Server load Res");
+  // console.log("Server load Res");
   const fetchMovies = async () => {
     const options = {
       method: "GET",
@@ -18,7 +18,7 @@ export const load = async () => {
       options
     );
     const data = await res.json();
-    return data.results;
+    return data.results; 
   };
 
   return {

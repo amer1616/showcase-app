@@ -1,13 +1,12 @@
 <script>
-
   export let data;
-  const {movies} =data;
+  const { movies } = data;
 
-// console.log(movies);
+  // console.log(movies);
 </script>
 
 <h1>Movies Page</h1>
 
-{#each movies as movie }
+{#each movies as movie}
   <h1>{movie.titleText.text}, {movie.releaseYear.year}</h1>
 {/each}

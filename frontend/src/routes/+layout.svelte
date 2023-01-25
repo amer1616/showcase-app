@@ -4,14 +4,14 @@
   import "./styles.css";
 </script>
 
-<div class="app">
+<div class="flex flex-col min-h-full">
   <Header />
 
-  <main>
+  <main class="flex flex-1 flex-col w-full mx-auto p-2">
     <slot />
   </main>
 
-  <footer>
+  <footer class="flex flex-col justify-center items-center p-10">
     <p>
       visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
     </p>
@@ -19,6 +19,7 @@
 </div>
 
 <style>
+  /*  
   .app {
     display: flex;
     flex-direction: column;
@@ -53,4 +54,5 @@
       padding: 12px 0;
     }
   }
+  */
 </style>
