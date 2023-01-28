@@ -1,0 +1,25 @@
+{
+	"/": [
+		"src/routes/+page.js"
+	],
+	"/about": [
+		"src/routes/about/+page.js"
+	],
+	"/contacts": [
+		"src/routes/contacts/+page.server.js"
+	],
+	"/movies": [
+		"src/routes/movies/+page.server.js"
+	],
+	"/settings": [
+		"src/routes/settings/+page.js"
+	],
+	"/settings/appearance": [],
+	"/settings/profile": [],
+	"/shop": [
+		"src/routes/shop/+page.js"
+	],
+	"/shop/[productId]": [
+		"src/routes/shop/[productId]/+page.js"
+	]
+}
