@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
-  import { enhance } from "$app/forms";
-  export let contacts = [];
+  import { enhance, applyAction } from "$app/forms";
+  export let contacts;
 </script>
 
 <div class="overflow-x-auto w-full">
@@ -23,7 +23,7 @@
     </thead>
     <!-- Table body -->
     <tbody>
-      {#each contacts as contact}
+      {#each contacts as contact (contact.id)}
         <tr>
           <th>
             <label>
@@ -56,9 +56,11 @@
           </td>
           <th>
             <form method="POST" action="?/delete" use:enhance>
-              <input type="hidden" name="id" id="" hidden value={contact.id} />
-              <button class="btn btn-square btn-error btn-outline">
-                <svg
+              <input type="hidden" name="id" id="" value={contact.id} />
+              <button type="submit" class="btn btn-square btn-outline "
+                ><span class="hover:text-white text-xl">❌</span>
+
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
                   fill="none"
@@ -68,9 +70,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  /></svg
-                >
+                    d="M6 18L18 6M6 6l12 12" /></svg> -->
               </button>
             </form>
           </th>

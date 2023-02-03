@@ -5,7 +5,7 @@ const config = {
     extend: {},
   },
 
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("prettier-plugin-tailwindcss")],
 };
 
 module.exports = config;
