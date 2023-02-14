@@ -47,15 +47,16 @@
           </td>
 
           <td
-            >{contact.job}
+            >{contact.jobTitle}
             <br />
-            <span class="badge badge-ghost badge-sm">{contact.company}</span>
+            <span class="badge badge-ghost badge-sm">{contact.companyName}</span
+            >
           </td>
           <td>
             {contact.email}
           </td>
           <th>
-            <form method="POST" action="?/delete" use:enhance>
+            <form method="POST" action="?/delete&id={contact.id}" use:enhance>
               <input type="hidden" name="id" id="" value={contact.id} />
               <button type="submit" class="btn btn-square btn-outline "
                 ><span class="hover:text-white text-xl">❌</span>

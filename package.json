@@ -2,7 +2,6 @@
   "name": "showcase",
   "version": "0.0.1",
   "scripts": {
-    "start": "node app.html",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
@@ -32,6 +31,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@prisma/client": "^4.9.0",
     "pocketbase": "^0.8.0-rc4"
   }
 }

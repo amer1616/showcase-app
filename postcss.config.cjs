@@ -1,5 +1,6 @@
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
+// const tailwindcssprettier = require("prettier-plugin-tailwindcss");
 
 const config = {
   plugins: [
@@ -7,6 +8,7 @@ const config = {
     tailwindcss(),
     //But others, like autoprefixer, need to run after,
     autoprefixer,
+    // tailwindcssprettier,
   ],
 };
 

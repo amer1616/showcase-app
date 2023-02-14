@@ -1,4 +1,5 @@
 // @ts-nocheck
+// local data storage
 let contacts = [
   {
     id: Date.now() + Math.random().toString(36),
@@ -6,7 +7,7 @@ let contacts = [
     email: "john@smith.com",
     company: "MS",
     job: "Software Engineer",
-    isActive: true,
+    isActive: false,
   },
   // {
   //   id: 2,

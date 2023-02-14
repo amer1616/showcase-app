@@ -10,6 +10,7 @@
   let loading = false;
 
   $: totalContacts = data.contacts.length;
+  $: ({ contacts } = data);
 </script>
 
 <div class="flex flex-col justify-center items-center">
@@ -19,7 +20,7 @@
   </div>
   <form
     method="POST"
-    action="?/create"
+    action="?/createContact"
     class="p-8 bg-base-100 sm:w-1/2 shadow-xl rounded-lg"
     use:enhance={({ form, data, action, cancel }) => {
       // before form submission
@@ -32,7 +33,7 @@
 
       // after form submission to server
       return async ({ result, update }) => {
-        // console.log(result);
+        console.log(result.data);
         loading = false;
 
         // reset form
@@ -84,14 +85,14 @@
         <span>Company</span>
         <input
           type="text"
-          name="company"
-          value={form?.company ?? ""}
-          placeholder="your company"
+          name="compnayName"
+          value={form?.compnayName ?? ""}
+          placeholder="your company name"
           class="input input-bordered"
         />
       </label>
-      {#if form?.errors?.company}
-        <Alert message={form?.errors?.company[0]} />
+      {#if form?.errors?.compnayName}
+        <Alert message={form?.errors?.compnayName[0]} />
       {/if}
     </div>
     <div class="form-control ">
@@ -99,14 +100,14 @@
         <span>Job</span>
         <input
           type="text"
-          name="job"
-          value={form?.job ?? ""}
+          name="jobTitle"
+          value={form?.jobTitle ?? ""}
           placeholder="your job"
           class="input input-bordered"
         />
       </label>
-      {#if form?.errors?.job}
-        <Alert message={form?.errors?.job[0]} />
+      {#if form?.errors?.jobTitle}
+        <Alert message={form?.errors?.jobTitle[0]} />
       {/if}
     </div>
     <button
@@ -129,5 +130,5 @@
 
 <div class="divider mx-auto" />
 
-<ContactsTable contacts={data?.contacts} />
+<ContactsTable {contacts} />
 <pre>{JSON.stringify(form, null, 3)}</pre>

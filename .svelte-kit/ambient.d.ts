@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const MOVDB_API_KEY: string;
+	export const DATABASE_URL: string;
 	export const MANPATH: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
@@ -116,6 +117,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		MOVDB_API_KEY: string;
+		DATABASE_URL: string;
 		MANPATH: string;
 		TERM_PROGRAM: string;
 		NODE: string;
